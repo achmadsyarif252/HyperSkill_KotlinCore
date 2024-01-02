@@ -22,14 +22,14 @@ fun main() {
     println(num)
 
 
-    var poet: String? = readln()
+//    var poet: String? = readln()
+//
+//    val coolScope = poet.run {
+//        println("Our poet is $this")
+//        this?.all { it == 'a' }
+//    }
 
-    val coolScope = poet.run {
-        println("Our poet is $this")
-        this?.all { it == 'a' }
-    }
-
-    println(coolScope)
+//    println(coolScope)
 
     var poet: String? = readln()
 
