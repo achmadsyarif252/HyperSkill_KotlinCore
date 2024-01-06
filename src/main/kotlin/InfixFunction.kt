@@ -37,7 +37,7 @@ fun main() {
 //    println(list secret 5)
 //
 //    fibbonacci(20)
-    val listOfShip = listOf(Sih)
+    val listOfShip = listOf(Ship2(name = "Tiger 212", ammunition = 200))
     println(listOfShip battle 50)
 
 }
