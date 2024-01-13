@@ -19,11 +19,11 @@ class Cat2 : AnimalHyperskill {
     }
 
     override fun move() {
-        run()
+//        run()
     }
 
     override fun communicate(): String {
-        return sayMeow()
+        return "sayMeow"
     }
 
 }
