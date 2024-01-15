@@ -1,32 +1,32 @@
 data class Spell(val name: String, val power: Int)
 
 fun main() {
-//    val originalList = readln().split(" ")
-//    val originalSet = originalList.toSet()
-//    val word = readln()
-//
-//    println(dropElements(originalList, word))
-//    println(dropElements(originalSet, word))
+    val originalList = readln().split(" ")
+    val originalSet = originalList.toSet()
+    val word = readln()
 
-//    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-//    val words = listOf("anne", "michael", "caroline", "dimitry", "emilio")
-//
-//    mappingNullableCollections(numbers, words)
+    println(dropElements(originalList, word))
+    println(dropElements(originalSet, word))
 
-//    mapAndMapping()
-//    flattenMap()
-//
-//    val list = readln().split(" ")
-//    // write your code here
-//    val res = list.map { it.last() }
-//    println(res)
+    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    val words = listOf("anne", "michael", "caroline", "dimitry", "emilio")
+
+    mappingNullableCollections(numbers, words)
+
+    mapAndMapping()
+    flattenMap()
+
+    val list = readln().split(" ")
+    // write your code here
+    val res = list.map { it.last() }
+    println(res)
 
     val input = readln().split(" ")
     val spells = input.map { Spell(it.split("-")[0], it.split("-")[1].toInt()) }
 
     // write your code here
-    val res = spells.filter { it.power >= 40 }.map { it.name }
-    println(res)
+    val res2 = spells.filter { it.power >= 40 }.map { it.name }
+    println(res2)
 }
 
 //flattern/flatMap
