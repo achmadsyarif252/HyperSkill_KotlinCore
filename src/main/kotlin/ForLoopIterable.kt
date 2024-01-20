@@ -16,14 +16,14 @@ fun main() {
     mutableIterator.add("black")
     println("After : $colors")
 
-    var messageBox = MessageBox(Message("hello!"))
-    messageBox.add(Message("I am from hyperskill"))
-    messageBox.add(Message("which programming language do you study?"))
+//    var messageBox = MessageBox(Message("hello!"))
+//    messageBox.add(Message("I am from hyperskill"))
+//    messageBox.add(Message("which programming language do you study?"))
 
-    val messageIterator = messageBox.iterator()
-    while (messageIterator.hasNext()) {
-        println(messageIterator.next().text)
-    }
+//    val messageIterator = messageBox.iterator()
+//    while (messageIterator.hasNext()) {
+//        println(messageIterator.next().text)
+//    }
 
     val map = mapOf(
         "NG" to "Nigeria",
@@ -55,36 +55,3 @@ fun findLongestByIterator(strIterator: Iterator<String>): String {
     return max
 }
 
-class Message(var text: String, var next: Message? = null) {}
-class MessageBox(var head: Message, var tail: Message = head) : Iterable<Message> {
-    init {
-        if (tail != head) {
-            head.next = tail
-        }
-    }
-
-    fun add(newMessage: Message) {
-        tail.next = newMessage
-        tail = newMessage
-    }
-
-    override fun iterator(): Iterator<Message> {
-        return MessageBoxIterator(this)
-    }
-}
-
-class MessageBoxIterator(messageBox: MessageBox) : Iterator<Message> {
-
-    private var current: Message = Message("EMPTY_PRE_HEAD", next = messageBox.head)
-
-    override fun hasNext(): Boolean {
-        return current.next != null
-    }
-
-    override fun next(): Message {
-        if (current.next == null) throw NoSuchElementException()
-
-        current = current.next!!
-        return current
-    }
-}
