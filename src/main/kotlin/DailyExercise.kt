@@ -36,12 +36,26 @@ fun main() {
 //    val list = readln().split(" ")
     // write your code here
 //    val res = list.foldIndexed(0) { i, a, s -> a + (i + 1) % 2 * s.length }
-    readln().also {
-        println(it[0])
-    }
+//    readln().also {
+//        println(it[0])
+//    }
 
+    // Do not touch code below
+//    val inputList: MutableList<MutableList<String>> = mutableListOf()
+//    val n = readLine()!!.toInt()
+//    for (i in 0 until n) {
+//        val strings = readLine()!!.split(' ').toMutableList()
+//        inputList.add(strings)
+//    }
+//    // write your code here
+//    println("${inputList.first().first()} ${inputList.first().last()}")
+//    println("${inputList.last().first()} ${inputList.last().last()}")
 
-
+    var a = readln()
+    var b = readln()
+    
+    println(b)
+    println(a)
 
 //    println(res)
 }
