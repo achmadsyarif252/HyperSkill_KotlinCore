@@ -40,9 +40,9 @@ fun main() {
     listTheTasks(worker)
 
     val a = 100
-    with(a) {
-        println(it)
-    }
+//    with(a) {
+//        println(it)
+//    }
 }
 
 fun listTheTasks(staff: StaffSealed) = when (staff) {

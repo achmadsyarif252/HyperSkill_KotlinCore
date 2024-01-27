@@ -39,9 +39,17 @@ abstract class WildShape : Polygon() {
 }
 
 fun main() {
-    val cat: AnimalAbstract = CatAnimal()
-    cat.move()
-    cat.makeSound()
+//    val cat: AnimalAbstract = CatAnimal()
+//    cat.move()
+//    cat.makeSound()
+    val list = readln().split(" ")
+
+    val res = list.firstOrNull { it.first() == 'j' && it.last() == 'e' }
+    println(res)
+
+    val square = Square2(readln().toDouble())
+    println("Area = ${square.calculateArea()}")
+    println("Perimeter = ${square.calculatePerimeter()}")
 }
 
 interface ShapeInterface {
@@ -73,3 +81,20 @@ class CircleShape(private val radius: Double) : AbstractShape() {
     }
 
 }
+
+abstract class Shape5 {
+    abstract fun calculateArea(): Double
+    abstract fun calculatePerimeter(): Double
+
+    fun printDescription() {
+        println("This is a shape.")
+    }
+}
+
+class Square2(val side:Double):Shape5(){
+    override fun calculateArea() = side * side
+    override fun calculatePerimeter() = 4 * side
+}
+
+// Do not change the code below
+
