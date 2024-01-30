@@ -51,13 +51,25 @@ fun main() {
 //    println("${inputList.first().first()} ${inputList.first().last()}")
 //    println("${inputList.last().first()} ${inputList.last().last()}")
 
-    var a = readln()
-    var b = readln()
-    
-    println(b)
-    println(a)
+//    var a = readln()
+//    var b = readln()
+//
+//    println(b)
+//    println(a)
 
 //    println(res)
+
+    Flowerbed("red", "rose").print()
 }
 
 data class Spell3(val name: String, val power: Int)
+
+open class Plant(open val name: String)
+
+open class Flower(name: String) : Plant(name)
+
+class Flowerbed(val color: String, name: String) : Flower(name) {
+    fun print() {
+        println("This flowerbed has many $color ${name}s")
+    }
+}
